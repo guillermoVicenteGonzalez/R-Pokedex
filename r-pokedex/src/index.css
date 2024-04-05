@@ -20,30 +20,3 @@
 
 body {
 }
-
-.title{
-  text-align: center;
-  font-size: 4rem;
-}
-.testLayout{
-  width: 50%;
-  display: block;
-  margin: auto;
-}
-
-.searchBar{
-  display: block;
-  margin: auto;
-}
-
-.display{
-  min-height: 50rem;
-  margin:2rem 0;
-  border: solid;
-}
-
-.btn{
-  padding: .5rem 2rem;
-  display: block;
-  margin: auto;
-}

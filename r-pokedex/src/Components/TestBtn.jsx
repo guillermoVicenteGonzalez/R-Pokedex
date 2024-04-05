@@ -12,11 +12,11 @@ async function test() {
   });
 }
 
-const TestBtn = ({onResult}) => {
+const TestBtn = ({ onResult }) => {
   return (
-  <button 
-    onClick={test}
-    className="btn">fetch</button>
+    <button onClick={test} className="btn">
+      fetch
+    </button>
   );
 };
 
