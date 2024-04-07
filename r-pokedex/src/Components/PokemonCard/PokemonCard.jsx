@@ -1,11 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Test = ({ pkmn }) => {
+const PokemonCard = ({ pkmn }) => {
   return (
     <div className="pkmnCard">
       <div className="pkmnCard__side pkmnCard__side--front">
         <h1 className="pkmnCard__name">{pkmn.name}</h1>
+
+
+        <div className="pkmnCard__types">
+          {Object.keys(pkmn).includes("types") ? pkmn.types[0].type.name : ""}
+        </div>
+
         <div className="pkmnCard__image-container">
           <img
             src={
@@ -14,6 +20,7 @@ const Test = ({ pkmn }) => {
             className="pkmnCard__image"
           ></img>
         </div>
+
 
         <div className="movesContainer"></div>
       </div>
@@ -25,14 +32,14 @@ const Test = ({ pkmn }) => {
   );
 };
 
-Test.propTypes = {
+PokemonCard.propTypes = {
   pkmn: PropTypes.object,
 };
 
-Test.defaultProps = {
+PokemonCard.defaultProps = {
   pkmn: {
     sprites: { front_default: undefined },
   },
 };
 
-export default Test;
+export default PokemonCard;

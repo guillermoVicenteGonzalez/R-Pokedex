@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-import TestBtn from "../Components/TestBtn";
-import SearchBar from "../Components/SearchBar";
-import TestView from "../Components/TestDisplay";
 import { useState } from "react";
 import { get } from "../services/baseServices";
 import ApiConf from "../config/apiConf.json";
 import * as pkmnService from "../services/pokemonService";
-import PokemonListView from "../Components/PokemonListView";
-import PokemonEntry from "../Components/PokemonEntry";
+import PokemonListView from "../Components/PokemonList/PokemonListView";
+import PokemonCard from "../Components/PokemonCard/PokemonCard";
+import PokemonEntry from "../Components/PokemonList/PokemonEntry";
 
 const TestLayout = () => {
   const endpoint = "pokemon/";
@@ -68,7 +66,7 @@ const TestLayout = () => {
             />
           )}
         />
-        <TestView pkmn={pokemon} />
+        <PokemonCard pkmn={pokemon} />
       </div>
       <button
         onClick={() => getPokemon(currentSearch)}
