@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-//gets an array ob objects. 
+//gets an array ob objects.
 //Filters them according to the listParam parameter
 
-const SearchFilter = ({ list, listParam, onSearch}) => {
+const SearchFilter = ({ list, listParam, onSearch }) => {
   const [input, setInput] = useState("");
+
+  useEffect(() => {
+    return () => {
+      setInput("");
+    };
+  }, []);
 
   function onInputCB(e) {
     setInput(e.target.value);
@@ -16,7 +22,7 @@ const SearchFilter = ({ list, listParam, onSearch}) => {
 
   function filterList(list, listParam, filter) {
     let regex = new RegExp(filter);
-    console.log(regex)
+    console.log(regex);
     return list.filter((item) => {
       return regex.test(item[listParam]);
     });
@@ -24,6 +30,7 @@ const SearchFilter = ({ list, listParam, onSearch}) => {
 
   return (
     <input
+      className="searchBar"
       value={input}
       onInput={(e) => onInputCB(e)}
       placeholder="search here"
@@ -34,12 +41,12 @@ const SearchFilter = ({ list, listParam, onSearch}) => {
 SearchFilter.propTypes = {
   list: PropTypes.array,
   listParam: PropTypes.string,
-  onSearch: PropTypes.func
+  onSearch: PropTypes.func,
 };
 
 SearchFilter.defaultProps = {
   list: [],
-  listParam: "name"
+  listParam: "name",
 };
 
 export default SearchFilter;
