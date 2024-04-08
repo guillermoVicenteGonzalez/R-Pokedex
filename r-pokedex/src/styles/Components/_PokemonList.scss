@@ -1,15 +1,15 @@
 .pkmnList {
-    overflow: scroll;
-    height: 60rem;
+  overflow: scroll;
+  height: 60rem;
+}
+
+.pokemonEntry {
+  padding: 1rem 1rem;
+  text-align: left;
+  border-top: solid 1px;
+  font-size: 1.6rem;
+
+  &:last-child {
+    border-bottom: solid 1px;
   }
-  
-  .pokemonEntry {
-    padding: 1rem 1rem;
-    text-align: left;
-    border-top: solid 1px;
-    font-size: 1.6rem;
-  
-    &:last-child {
-      border-bottom: solid 1px;
-    }
-  }
+}

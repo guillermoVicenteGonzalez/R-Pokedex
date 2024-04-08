@@ -7,7 +7,6 @@ const PokemonCard = ({ pkmn }) => {
       <div className="pkmnCard__side pkmnCard__side--front">
         <h1 className="pkmnCard__name">{pkmn.name}</h1>
 
-
         <div className="pkmnCard__types">
           {Object.keys(pkmn).includes("types") ? pkmn.types[0].type.name : ""}
         </div>
@@ -20,7 +19,6 @@ const PokemonCard = ({ pkmn }) => {
             className="pkmnCard__image"
           ></img>
         </div>
-
 
         <div className="movesContainer"></div>
       </div>

@@ -6,11 +6,13 @@ import * as pkmnService from "../services/pokemonService";
 import PokemonListView from "../Components/PokemonList/PokemonListView";
 import PokemonCard from "../Components/PokemonCard/PokemonCard";
 import PokemonEntry from "../Components/PokemonList/PokemonEntry";
+import SearchFilter from "../Components/SearchFilter";
 
 const TestLayout = () => {
   const endpoint = "pokemon/";
   const [pokemon, setPokemon] = useState({});
   const [pkmnList, setPkmnList] = useState([]);
+  const [filteredPkmnList, setFilteredPkmnList] = useState([])
   const [currentSearch, setCurrentSearch] = useState("");
 
   useEffect(() => {
@@ -27,6 +29,7 @@ const TestLayout = () => {
       let pkmnList = await pkmnService.getPokemonList();
       console.log(pkmnList);
       setPkmnList(pkmnList);
+      setFilteredPkmnList(pkmnList)
     } else {
       console.log("entro en get 1 pokemon");
       let nPkmn = await pkmnService.getPokemon(name);
@@ -40,24 +43,22 @@ const TestLayout = () => {
     setPokemon(nPkmn);
   }
 
-  function test() {
-    alert("this is a test");
-  }
-
   return (
     <div className="testLayout">
       <h1 className="title">Pokedex</h1>
 
-      <input
+      {/* <input
         value={currentSearch}
         onChange={(e) => setCurrentSearch(e.target.value)}
         type="text"
         className="searchBar"
-      ></input>
+      ></input> */}
+
+      <SearchFilter list={pkmnList} listParam={"name"} onSearch={(filtered) => setFilteredPkmnList(filtered)}/>
       <p>{currentSearch}</p>
       <div className="testLayout__body">
         <PokemonListView
-          pokemonList={pkmnList}
+          pokemonList={filteredPkmnList}
           component={(pokemon) => (
             <PokemonEntry
               onEntryClick={() => setPokemonView(pokemon.name)}
