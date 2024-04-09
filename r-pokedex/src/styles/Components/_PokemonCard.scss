@@ -1,14 +1,18 @@
+$card-height: 55rem;
+$card-width: 40rem;
+$section-separation:1.5rem;
+
 .pkmnCard {
   position: relative;
   perspective: 150rem;
   -moz-perspective: 150rem;
 
-  height: 60rem;
-  width: 45rem;
+  height: $card-height;
+  width: $card-width;
   margin: auto;
 
   &__side {
-    height: 60rem;
+    height: $card-height;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -44,17 +48,24 @@
   &__name {
     padding: 0.5rem;
     text-align: center;
-    border: solid 10px gold;
+    border: solid 5px gold;
     border-radius: $default-border-radius;
     background-color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.6);
+    margin-bottom: $section-separation;
+  }
+
+  &__types{
+    margin-bottom: $section-separation;
+    > *{
+      margin:0 .3rem;
+    }
   }
 
   &__image {
     &-container {
       background-color: #fff;
-      margin-top: 4rem;
       border: solid 10px gold;
       height: 20rem;
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.6);
@@ -67,4 +78,5 @@
 }
 
 .pkmnCard--fire {
+  
 }

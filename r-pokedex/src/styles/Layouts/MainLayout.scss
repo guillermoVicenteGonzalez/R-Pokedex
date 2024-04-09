@@ -1,13 +1,25 @@
+// .testLayout {
+//   // width: 100vw;
+//   // height: 100vh;
+//   display: block;
+//   margin: auto;
+//   padding: 5rem 10rem;
+
+//   &__body {
+//     margin: 2rem 0;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap: 8rem;
+//   }
+// }
+
 .testLayout {
-  width: 100%;
   display: block;
   margin: auto;
-  padding: 10rem;
 
   &__body {
-    margin: 2rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    padding: 5rem;
   }
 }

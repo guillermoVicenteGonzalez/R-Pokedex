@@ -1,6 +1,12 @@
+$list-height: 55rem;
+$list-width: 50rem;
+
 .pkmnList {
+  display: block;
+  margin: auto;
   overflow: auto;
-  height: 60rem;
+  height: $list-height;
+  width: $list-width;
 }
 
 .pokemonEntry {
@@ -8,7 +14,6 @@
   text-align: left;
   border-top: solid 1px;
   font-size: 1.6rem;
-
   &:last-child {
     border-bottom: solid 1px;
   }

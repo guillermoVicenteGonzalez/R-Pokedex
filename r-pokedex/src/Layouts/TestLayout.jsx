@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
-import { get } from "../services/baseServices";
-import ApiConf from "../config/apiConf.json";
 import * as pkmnService from "../services/pokemonService";
 import PokemonListView from "../Components/PokemonList/PokemonListView";
 import PokemonCard from "../Components/PokemonCard/PokemonCard";
@@ -9,7 +7,6 @@ import PokemonEntry from "../Components/PokemonList/PokemonEntry";
 import SearchFilter from "../Components/SearchFilter";
 
 const TestLayout = () => {
-  const endpoint = "pokemon/";
   const [pokemon, setPokemon] = useState({});
   const [pkmnList, setPkmnList] = useState([]);
   const [filteredPkmnList, setFilteredPkmnList] = useState([]);

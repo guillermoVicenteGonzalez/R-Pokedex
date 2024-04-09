@@ -3,36 +3,22 @@
 @import "./styles/Components/Card";
 @import "./styles/Components/PokemonCard";
 @import "./styles/Components/PokemonList";
+@import "./styles/Components/TypeChip";
 
 @import "./styles/Layouts/MainLayout.scss";
 
-.title {
-  text-align: center;
-  font-size: 4rem;
-}
+// .title {
+//   text-align: center;
+//   font-size: 4rem;
+// }
 
-.testLayout {
-  width: 100%;
-  display: block;
-  margin: auto;
-  padding: 10rem;
+// .searchBar {
+//   display: block;
+//   margin: auto;
+// }
 
-  &__body {
-    margin: 2rem 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8rem;
-  }
-}
-
-.searchBar {
-  display: block;
-
-  margin: auto;
-}
-
-.btn {
-  padding: 0.5rem 2rem;
-  display: block;
-  margin: auto;
-}
+// .btn {
+//   padding: 0.5rem 2rem;
+//   display: block;
+//   margin: auto;
+// }

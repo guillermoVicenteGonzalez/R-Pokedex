@@ -7,9 +7,21 @@ const PokemonCard = ({ pkmn }) => {
       <div className="pkmnCard__side pkmnCard__side--front">
         <h1 className="pkmnCard__name">{pkmn.name}</h1>
 
-        <div className="pkmnCard__types">
-          {Object.keys(pkmn).includes("types") ? pkmn.types[0].type.name : ""}
-        </div>
+        {Object.keys(pkmn).includes("types") ? (
+          <div className="pkmnCard__types">
+            {pkmn.types.map((type) => (
+              <div 
+              key={type.type.name} 
+              className={
+                `type-chip type-chip--${type.type.name}`
+              }>
+                {(type.type.name)}
+              </div>
+            ))}
+          </div>
+        ) : (
+          ""
+        )}
 
         <div className="pkmnCard__image-container">
           <img

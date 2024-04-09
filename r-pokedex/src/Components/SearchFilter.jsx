@@ -16,13 +16,11 @@ const SearchFilter = ({ list, listParam, onSearch }) => {
   function onInputCB(e) {
     setInput(e.target.value);
     let filtered = filterList(list, listParam, input);
-    console.log(filtered);
     onSearch(filtered);
   }
 
   function filterList(list, listParam, filter) {
     let regex = new RegExp(filter);
-    console.log(regex);
     return list.filter((item) => {
       return regex.test(item[listParam]);
     });
@@ -32,7 +30,7 @@ const SearchFilter = ({ list, listParam, onSearch }) => {
     <input
       className="searchBar"
       value={input}
-      onInput={(e) => onInputCB(e)}
+      onInput={onInputCB}
       placeholder="search here"
     ></input>
   );
