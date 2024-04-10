@@ -3,79 +3,71 @@
   padding: 0.5rem 1rem;
   border-radius: $default-border-radius;
 
-  &--fire {
-    background-color: red;
-  }
-
-  &--poison{
-    background-color:purple;
-    color:#fff;
-  }
-
-  &--steel{
+  &--steel {
     background-color: $steel-color;
   }
 
-  &--flying{
+  &--flying {
     background-color: $flying-color;
   }
 
-&--water{
+  &--water {
     background-color: $water-color;
-}
-    &--ice{
-        background-color:$ice-color;
-    }
+  }
+  &--ice {
+    background-color: $ice-color;
+  }
 
-    &--grass{
-        background-color: $grass-color;
-    }
+  &--grass {
+    background-color: $grass-color;
+    border: solid 1px $grass-comp-color;
+  }
 
-    &--bug{
-        background-color: $bug-color;
-    }
+  &--bug {
+    background-color: $bug-color;
+  }
 
-    &--electric{
-        background-color: $electric-color;
-    }
+  &--electric {
+    background-color: $electric-color;
+  }
 
-    &--rock{
-        background-color: $rock-color;
-    }
+  &--rock {
+    background-color: $rock-color;
+  }
 
-    &--earth{
-        background-color: $earth-color;
-    }
+  &--earth {
+    background-color: $earth-color;
+  }
 
-    &--fire{
-        background-color: $fire-color;
-    }
+  &--fire {
+    background-color: $fire-color;
+  }
 
-    &--fighting{
-        background-color: $fighting-color;
-    }
+  &--fighting {
+    background-color: $fighting-color;
+  }
 
-    &--psychic{
-        background-color: $psychic-color;
-    }
+  &--psychic {
+    background-color: $psychic-color;
+  }
 
-    &--posicon{
-        background-color: $poison-color;
-    }
+  &--posicon {
+    background-color: $poison-color;
+  }
 
-    &--dragon{
-        background-color: $dragon-color;
-    }
+  &--dragon {
+    background-color: $dragon-color;
+  }
 
-    &--phantom{
-        background-color: $phantom-color;
-    }
+  &--phantom {
+    background-color: $phantom-color;
+  }
 
-    &--sinister{
-        background-color: $sinister-color;
-    }
+  &--sinister {
+    background-color: $sinister-color;
+  }
 
-    &--normal{
-        background-color: $normal-color;
-    }
+  &--normal {
+    background-color: $normal-color;
+  }
 }

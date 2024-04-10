@@ -1,15 +1,11 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import TestLayout from "./Layouts/TestLayout";
+import { StrictMode } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <StrictMode>
       <TestLayout />
-    </>
+    </StrictMode>
   );
 }
 

@@ -2,20 +2,27 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const PokemonCard = ({ pkmn }) => {
+  function getPkmnType(p) {
+    if (Object.keys(p).includes("types")) {
+      return p.types[0].type.name;
+    } else {
+      return "";
+    }
+  }
+
   return (
-    <div className="pkmnCard">
+    <div className={`pkmnCard pkmnCard--${getPkmnType(pkmn)}`}>
       <div className="pkmnCard__side pkmnCard__side--front">
         <h1 className="pkmnCard__name">{pkmn.name}</h1>
 
         {Object.keys(pkmn).includes("types") ? (
           <div className="pkmnCard__types">
             {pkmn.types.map((type) => (
-              <div 
-              key={type.type.name} 
-              className={
-                `type-chip type-chip--${type.type.name}`
-              }>
-                {(type.type.name)}
+              <div
+                key={type.type.name}
+                className={`type-chip type-chip--${type.type.name}`}
+              >
+                {type.type.name}
               </div>
             ))}
           </div>
