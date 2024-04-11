@@ -1,4 +1,3 @@
-import React from "react";
 import propTypes from "prop-types";
 
 const PokemonListView = ({ pokemonList, component }) => {
@@ -17,6 +16,7 @@ const PokemonListView = ({ pokemonList, component }) => {
 
 PokemonListView.propTypes = {
   pokemonList: propTypes.array,
+  component: propTypes.func,
 };
 
 PokemonListView.defaultProps = {

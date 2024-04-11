@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import PokemonCardMoves from "./PokemonCardMoves";
+import PokemonCardStats from "./PokemonCardStats";
 
 const PokemonCard = ({ pkmn }) => {
   function getPkmnType(p) {
@@ -39,11 +41,15 @@ const PokemonCard = ({ pkmn }) => {
           ></img>
         </div>
 
-        <div className="movesContainer"></div>
+        <div className="pkmnCard__stats">
+          <PokemonCardStats stats={pkmn.stats}></PokemonCardStats>
+        </div>
       </div>
 
       <div className="pkmnCard__side pkmnCard__side--back">
-        <p>ahoasloa</p>
+        <div className="movesContainer">
+          <PokemonCardMoves moves={pkmn.moves} />
+        </div>
       </div>
     </div>
   );
