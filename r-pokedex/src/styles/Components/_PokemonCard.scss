@@ -66,8 +66,8 @@ $section-separation: 1.5rem;
   &__image {
     backdrop-filter: blur(20px) brightness(1.3);
     animation-name: imageBackgroundAnim;
-    animation-duration:5s;
-    animation-iteration-count:infinite;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 
     &-container {
       background: conic-gradient(
@@ -109,27 +109,24 @@ $section-separation: 1.5rem;
   }
 
   &--fire {
-    @include pkmnCardColor($fire-color, $fire-comp-color)
+    @include pkmnCardColor($fire-color, $fire-comp-color);
   }
 
   &--grass {
-    @include pkmnCardColor($grass-color, $grass-comp-color)
+    @include pkmnCardColor($grass-color, $grass-comp-color);
   }
 }
 
-
-
 @keyframes imageBackgroundAnim {
-  0%{
-    backdrop-filter: blur(12px) brightness(.8);
+  0% {
+    backdrop-filter: blur(12px) brightness(0.8);
   }
 
-  50%{
+  50% {
     backdrop-filter: blur(20px) brightness(1.3);
   }
 
-  100%{
-    backdrop-filter: blur(12px) brightness(.8);
-
+  100% {
+    backdrop-filter: blur(12px) brightness(0.8);
   }
 }

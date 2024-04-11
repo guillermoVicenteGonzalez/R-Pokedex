@@ -17,4 +17,10 @@ $list-width: 50rem;
   &:last-child {
     border-bottom: solid 1px;
   }
+
+  &:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: aliceblue;
+  }
 }

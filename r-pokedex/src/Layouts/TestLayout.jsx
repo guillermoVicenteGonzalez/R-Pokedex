@@ -41,13 +41,14 @@ const TestLayout = () => {
 
   return (
     <div className="testLayout">
-      <h1 className="title">Pokedex</h1>
-
-      <SearchFilter
-        list={pkmnList}
-        listParam={"name"}
-        onSearch={(filtered) => setFilteredPkmnList(filtered)}
-      />
+      <div className="testLayout__heading">
+        <h1 className="heading-primary">Pokedex</h1>
+        <SearchFilter
+          list={pkmnList}
+          listParam={"name"}
+          onSearch={(filtered) => setFilteredPkmnList(filtered)}
+        />
+      </div>
       <div className="testLayout__body">
         <PokemonListView
           pokemonList={filteredPkmnList}

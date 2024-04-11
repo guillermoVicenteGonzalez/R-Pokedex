@@ -17,9 +17,15 @@
   display: block;
   margin: auto;
 
+  &__heading {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
   &__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 5rem;
+    padding: 2rem 5rem;
   }
 }

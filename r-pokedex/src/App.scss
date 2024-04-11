@@ -1,25 +1,12 @@
 @import "./styles/abstract/variables.scss";
 @import "./styles/abstract/mixins";
 
+@import "./styles/base/typography";
+
 @import "./styles/Components/Card";
 @import "./styles/Components/PokemonCard";
 @import "./styles/Components/PokemonList";
 @import "./styles/Components/TypeChip";
+@import "./styles/Components/SearchBar";
 
 @import "./styles/Layouts/MainLayout.scss";
-
-// .title {
-//   text-align: center;
-//   font-size: 4rem;
-// }
-
-// .searchBar {
-//   display: block;
-//   margin: auto;
-// }
-
-// .btn {
-//   padding: 0.5rem 2rem;
-//   display: block;
-//   margin: auto;
-// }
