@@ -1,0 +1,13 @@
+@mixin pkmnChipColor($primary, $secondary){
+    background: linear-gradient(to bottom, $primary, $secondary);
+}
+
+@mixin pkmnCardColor($primary, $secondary){
+    .pkmnCard__side--front{
+        background: linear-gradient(
+            to bottom right,
+            $primary 60%,
+            $secondary
+          );        
+    }
+}

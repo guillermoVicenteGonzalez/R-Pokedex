@@ -1,7 +1,12 @@
 .type-chip {
-  display: inline;
-  padding: 0.5rem 1rem;
+  display: inline-block;
+  padding: 0.2rem 1rem;
   border-radius: $default-border-radius;
+  box-shadow: 0rem 1rem 2rem rgba(0,0,0,.6);
+  min-width: 5rem;
+  text-align: center;
+  font-size: 1.6rem;
+
 
   &--steel {
     background-color: $steel-color;
@@ -19,7 +24,7 @@
   }
 
   &--grass {
-    background-color: $grass-color;
+    background:linear-gradient(to bottom, $grass-color, $grass-comp-color 95%);
     border: solid 1px $grass-comp-color;
   }
 
@@ -40,7 +45,11 @@
   }
 
   &--fire {
-    background-color: $fire-color;
+    // background:linear-gradient(to bottom, $fire-color, $fire-comp-color 90% 100%);
+    // border: solid 1px $fire-comp-color;
+    @include pkmnChipColor($fire-color,$fire-comp-color);
+    border: solid 1px white;
+    color:#fff;
   }
 
   &--fighting {
@@ -51,7 +60,7 @@
     background-color: $psychic-color;
   }
 
-  &--posicon {
+  &--poison {
     background-color: $poison-color;
   }
 

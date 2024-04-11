@@ -109,23 +109,11 @@ $section-separation: 1.5rem;
   }
 
   &--fire {
-    .pkmnCard__side--front {
-      background: linear-gradient(
-        to bottom right,
-        $fire-comp-color 20%,
-        $fire-color
-      );
-    }
+    @include pkmnCardColor($fire-color, $fire-comp-color)
   }
 
   &--grass {
-    .pkmnCard__side--front {
-      background: linear-gradient(
-        to bottom right,
-        $grass-comp-color 20%,
-        $grass-color
-      );
-    }
+    @include pkmnCardColor($grass-color, $grass-comp-color)
   }
 }
 
