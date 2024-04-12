@@ -2,9 +2,9 @@ $list-height: 55rem;
 $list-width: 50rem;
 
 .pkmnList {
-overflow: auto;
-  &__searchbar{
-    margin:2rem 1rem;
+  overflow: auto;
+  &__searchbar {
+    margin: 2rem 1rem;
   }
 
   &__view {
@@ -13,22 +13,20 @@ overflow: auto;
     overflow: auto;
     // max-width: 100%;
     // height: 100%;
-    padding:0 1.5rem;
+    padding: 0 1.5rem;
     max-height: 100vh;
     overflow-y: hidden;
-
   }
 
   &__Entry {
-    margin:.5rem 0;
+    margin: 0.5rem 0;
     padding: 1rem 1rem;
     text-align: left;
     font-size: 1.6rem;
     border-radius: $default-border-radius;
-    box-shadow: 0 0rem .5rem rgba($color-black, .5);
+    box-shadow: 0 0rem 0.5rem rgba($color-black, 0.5);
 
     //pruebas
-
 
     &:last-child {
       // border-bottom: solid 1px;
@@ -38,7 +36,7 @@ overflow: auto;
       border-radius: 5px;
       cursor: pointer;
       background-color: $secondary-color;
-      color:$color-white
+      color: $color-white;
     }
   }
 }

@@ -180,7 +180,7 @@ $section-separation: 1.5rem;
   &--bug {
     @include pkmnCardColor($bug-color, $bug-comp-color);
   }
-  
+
   &--electric {
     @include pkmnCardColor($electric-color, $electric-comp-color);
   }
@@ -220,7 +220,6 @@ $section-separation: 1.5rem;
   &--normal {
     @include pkmnCardColor($normal-color, $normal-comp-color);
   }
-
 }
 
 @keyframes imageBackgroundAnim {
