@@ -156,6 +156,70 @@ $section-separation: 1.5rem;
   &--grass {
     @include pkmnCardColor($grass-color, $grass-comp-color);
   }
+
+  &--steel {
+    @include pkmnCardColor($steel-color, $steel-comp-color);
+  }
+
+  &--flying {
+    @include pkmnCardColor($flying-color, $flying-comp-color);
+  }
+
+  &--water {
+    @include pkmnCardColor($water-color, $water-comp-color);
+  }
+
+  &--ice {
+    @include pkmnCardColor($ice-color, $ice-comp-color);
+  }
+
+  &--grass {
+    @include pkmnCardColor($grass-color, $grass-comp-color);
+  }
+
+  &--bug {
+    @include pkmnCardColor($bug-color, $bug-comp-color);
+  }
+  
+  &--electric {
+    @include pkmnCardColor($electric-color, $electric-comp-color);
+  }
+
+  &--rock {
+    @include pkmnCardColor($rock-color, $rock-comp-color);
+  }
+
+  &--earth {
+    @include pkmnCardColor($earth-color, $earth-comp-color);
+  }
+
+  &--fighting {
+    @include pkmnCardColor($fighting-color, $fighting-comp-color);
+  }
+
+  &--psychic {
+    @include pkmnCardColor($psychic-color, $psychic-comp-color);
+  }
+
+  &--poison {
+    @include pkmnCardColor($poison-color, $poison-comp-color);
+  }
+
+  &--dragon {
+    @include pkmnCardColor($dragon-color, $dragon-comp-color);
+  }
+
+  &--phantom {
+    @include pkmnCardColor($phantom-color, $phantom-comp-color);
+  }
+
+  &--sinister {
+    @include pkmnCardColor($sinister-color, $sinister-comp-color);
+  }
+
+  &--normal {
+    @include pkmnCardColor($normal-color, $normal-comp-color);
+  }
 }
 
 @keyframes imageBackgroundAnim {
