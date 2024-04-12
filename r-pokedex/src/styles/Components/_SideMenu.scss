@@ -11,10 +11,14 @@ $menuTriggerAnimationDuration: 0.5s;
   height: 100vh;
   padding: 5rem 2.5rem 3rem 2.5rem;
 
-  background-color: #fff;
+  // background-color: $surface-color;
+  // color: $secondary-color;
+
+  background-color: $color-white;
+
   border-top-right-radius: 20px;
   border-bottom-right-radius: 10px;
-  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1.2rem 2rem rgba($color-white, 0.6);
 
   display: flex;
   flex-direction: row;

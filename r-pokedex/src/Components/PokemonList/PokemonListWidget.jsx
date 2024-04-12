@@ -12,12 +12,13 @@ const PokemonListWidget = ({ pkmnList, onPkmnSelected }) => {
 
   return (
     <div className="pkmnList">
-      <SearchFilter
-        className="menuControls__searchbar"
-        list={pkmnList}
-        listParam={"name"}
-        onSearch={(filtered) => setFilteredPkmnList(filtered)}
-      />
+      <div className="pkmnList__searchbar">
+        <SearchFilter
+          list={pkmnList}
+          listParam={"name"}
+          onSearch={(filtered) => setFilteredPkmnList(filtered)}
+        />
+      </div>
       <PokemonListView
         pokemonList={filteredPkmnList}
         component={(pokemon) => (

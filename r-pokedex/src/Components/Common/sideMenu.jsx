@@ -1,5 +1,4 @@
 import propTypes from "prop-types";
-import { useState } from "react";
 
 const SideMenu = ({ visible, children, onClose, sidebar }) => {
   //   const [trigger, setTrigger] = useState(false);
@@ -23,11 +22,15 @@ const SideMenu = ({ visible, children, onClose, sidebar }) => {
 SideMenu.propTypes = {
   children: propTypes.object,
   visible: propTypes.bool,
+  onClose: propTypes.func,
+  sidebar: propTypes.node,
 };
 
 SideMenu.defaultProps = {
   children: {},
   visible: false,
+  onClose: () => "",
+  sidebar: {},
 };
 
 export default SideMenu;

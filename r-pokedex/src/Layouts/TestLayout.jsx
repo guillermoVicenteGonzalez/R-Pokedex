@@ -56,7 +56,6 @@ const TestLayout = () => {
           }
           header={<h1 className="heading-primary">Pokedex</h1>}
           settings={<h2>settings</h2>}
-          sideMenu={<span>&nbsp;</span>}
         ></AppBar>
       </div>
 

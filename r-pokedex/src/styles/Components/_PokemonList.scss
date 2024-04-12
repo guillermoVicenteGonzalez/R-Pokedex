@@ -2,27 +2,40 @@ $list-height: 55rem;
 $list-width: 50rem;
 
 .pkmnList {
+overflow: auto;
+  &__searchbar{
+    margin:2rem 1rem;
+  }
+
   &__view {
     display: block;
     margin: auto;
     overflow: auto;
     max-width: 100%;
-    max-height: 100%;
+    height: 100%;
+    padding:0 1.5rem;
   }
 
   &__Entry {
+    margin:.5rem 0;
     padding: 1rem 1rem;
     text-align: left;
-    border-top: solid 1px;
     font-size: 1.6rem;
+    border-radius: $default-border-radius;
+    box-shadow: 0 0rem .5rem rgba($color-black, .5);
+
+    //pruebas
+
+
     &:last-child {
-      border-bottom: solid 1px;
+      // border-bottom: solid 1px;
     }
 
     &:hover {
       border-radius: 5px;
       cursor: pointer;
-      background-color: aliceblue;
+      background-color: $secondary-color;
+      color:$color-white
     }
   }
 }

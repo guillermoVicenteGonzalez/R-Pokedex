@@ -25,7 +25,8 @@ $section-separation: 1.5rem;
 
     border-radius: $default-border-radius;
     border: solid 10px gold;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.6);
+    // box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1rem 2rem rgba($color-white, 0.6);
 
     overflow: hidden;
 
