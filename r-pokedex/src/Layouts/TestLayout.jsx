@@ -1,17 +1,15 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import * as pkmnService from "../services/pokemonService";
-import PokemonListView from "../Components/PokemonList/PokemonListView";
 import PokemonCard from "../Components/PokemonCard/PokemonCard";
-import PokemonEntry from "../Components/PokemonList/PokemonEntry";
-import SearchFilter from "../Components/Common/SearchFilter";
 import SideMenu from "../Components/Common/sideMenu";
 import AppBar from "../Components/Common/AppBar";
+import PokemonListWidget from "../Components/PokemonList/PokemonListWidget";
 
 const TestLayout = () => {
   const [pokemon, setPokemon] = useState({});
   const [pkmnList, setPkmnList] = useState([]);
-  const [filteredPkmnList, setFilteredPkmnList] = useState([]);
+  // const [filteredPkmnList, setFilteredPkmnList] = useState([]);
   const [sideMenuTrigger, setSideMenuTrigger] = useState(false);
 
   useEffect(() => {
@@ -27,7 +25,7 @@ const TestLayout = () => {
       console.log("entro en get muchos pokemon");
       let pkmnList = await pkmnService.getPokemonList();
       setPkmnList(pkmnList);
-      setFilteredPkmnList(pkmnList);
+      // setFilteredPkmnList(pkmnList);
       setPokemonView(pkmnList[0].name);
     } else {
       console.log("entro en get 1 pokemon");
@@ -63,23 +61,21 @@ const TestLayout = () => {
       </div>
 
       <div className="testLayout__body">
-        <SideMenu visible={sideMenuTrigger} onClose={()=>setSideMenuTrigger(false)}>
-          <div className="menuControls">
-            <SearchFilter
-              list={pkmnList}
-              listParam={"name"}
-              onSearch={(filtered) => setFilteredPkmnList(filtered)}
-            />
-            <PokemonListView
-              pokemonList={filteredPkmnList}
-              component={(pokemon) => (
-                <PokemonEntry
-                  onEntryClick={() => setPokemonView(pokemon.name)}
-                  key={pokemon.name}
-                  pokemon={pokemon}
-                />
-              )}
-            />
+        <SideMenu
+          visible={sideMenuTrigger}
+          onClose={() => setSideMenuTrigger(false)}
+          sidebar={
+            <>
+              <div>hola</div>
+              <div>adios</div>
+            </>
+          }
+        >
+          <div className="testLayout__list">
+            <PokemonListWidget
+              pkmnList={pkmnList}
+              onPkmnSelected={(name) => setPokemonView(name)}
+            ></PokemonListWidget>
           </div>
         </SideMenu>
         <PokemonCard pkmn={pokemon} />

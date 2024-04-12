@@ -3,7 +3,7 @@ import propTypes from "prop-types";
 
 const pokemonEntry = ({ pokemon, onEntryClick }) => {
   return (
-    <div onClick={onEntryClick} className="pokemonEntry">
+    <div onClick={onEntryClick} className="pkmnList__Entry">
       <span>{pokemon.name}</span>
     </div>
   );

@@ -2,25 +2,27 @@ $list-height: 55rem;
 $list-width: 50rem;
 
 .pkmnList {
-  display: block;
-  margin: auto;
-  overflow: auto;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.pokemonEntry {
-  padding: 1rem 1rem;
-  text-align: left;
-  border-top: solid 1px;
-  font-size: 1.6rem;
-  &:last-child {
-    border-bottom: solid 1px;
+  &__view {
+    display: block;
+    margin: auto;
+    overflow: auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 
-  &:hover {
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: aliceblue;
+  &__Entry {
+    padding: 1rem 1rem;
+    text-align: left;
+    border-top: solid 1px;
+    font-size: 1.6rem;
+    &:last-child {
+      border-bottom: solid 1px;
+    }
+
+    &:hover {
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: aliceblue;
+    }
   }
 }

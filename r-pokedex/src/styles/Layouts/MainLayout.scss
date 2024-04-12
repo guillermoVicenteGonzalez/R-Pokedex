@@ -36,8 +36,11 @@
     justify-content: center;
     align-items: center;
   }
-}
 
-.menuControls {
-  padding: 2rem 5rem;
+  &__list {
+    &__searchbar {
+      width: 100%;
+      background-color: aliceblue;
+    }
+  }
 }
