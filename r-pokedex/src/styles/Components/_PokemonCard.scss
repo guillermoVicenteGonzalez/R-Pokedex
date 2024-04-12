@@ -220,6 +220,7 @@ $section-separation: 1.5rem;
   &--normal {
     @include pkmnCardColor($normal-color, $normal-comp-color);
   }
+
 }
 
 @keyframes imageBackgroundAnim {

@@ -77,7 +77,9 @@ const TestLayout = () => {
             ></PokemonListWidget>
           </div>
         </SideMenu>
-        <PokemonCard pkmn={pokemon} />
+        <div className={sideMenuTrigger ? "slideToRight" : "slideFromRight"}>
+          <PokemonCard pkmn={pokemon} />
+        </div>
       </div>
     </div>
   );
