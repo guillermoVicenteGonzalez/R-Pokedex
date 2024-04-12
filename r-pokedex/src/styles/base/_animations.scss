@@ -1,2 +1,36 @@
-@keyframes slideFromLeft {
+@keyframes grow{
+    0%{
+        overflow: hidden;
+        display: block;
+        width: 0;
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        // width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes shrink{
+    0%{
+        // display: block;
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        width: 0;
+        display: none;
+        opacity: 0;
+    }
+
+
 }

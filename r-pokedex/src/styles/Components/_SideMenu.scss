@@ -1,3 +1,5 @@
+$menuTriggerAnimationDuration: .5s;
+
 .sideMenu {
   position: absolute;
   top: 0;
@@ -18,6 +20,8 @@
   flex-direction: row;
   gap:2rem;
 
+  animation-name: grow;
+  animation-duration: $menuTriggerAnimationDuration;
   transition: all 1s;
 
   &__toggle {
@@ -42,10 +46,12 @@
   }
 
   &--hidden {
-    height: fit-content;
-    width: fit-content;
-    width: 0;
-    display: none;
+    // height: fit-content;
+    // width: fit-content
+    animation-name: shrink;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transition: all 1s;
 
     .sideMenu__sidebar,
     .sideMenu__body {
