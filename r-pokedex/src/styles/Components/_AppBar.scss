@@ -1,0 +1,14 @@
+.AppBar {
+  display: block;
+  //   position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8rem;
+
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

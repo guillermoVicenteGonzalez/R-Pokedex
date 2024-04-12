@@ -16,16 +16,28 @@
 .testLayout {
   display: block;
   margin: auto;
+  width: 100vw;
+  height: 100vh;
 
   &__heading {
     display: block;
     margin: auto;
     text-align: center;
+    // position: relative;
   }
 
   &__body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem 5rem;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // padding: 2rem 5rem;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
+}
+
+.menuControls {
+  padding: 2rem 5rem;
 }

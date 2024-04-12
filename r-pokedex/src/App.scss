@@ -2,11 +2,14 @@
 @import "./styles/abstract/mixins";
 
 @import "./styles/base/typography";
+@import "./styles/base/base";
 
 @import "./styles/Components/Card";
 @import "./styles/Components/PokemonCard";
 @import "./styles/Components/PokemonList";
 @import "./styles/Components/TypeChip";
 @import "./styles/Components/SearchBar";
+@import "./styles/Components/SideMenu";
+@import "./styles/Components/AppBar";
 
 @import "./styles/Layouts/MainLayout.scss";

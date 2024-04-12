@@ -2,7 +2,7 @@ import propTypes from "prop-types";
 
 const PokemonListView = ({ pokemonList, component }) => {
   return (
-    <div className="pkmnList card">
+    <div className="pkmnList">
       {pokemonList.map(
         (pokemon) => component(pokemon),
         // <PokemonEntry

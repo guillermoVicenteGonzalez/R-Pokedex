@@ -4,9 +4,8 @@ const PokemonCardMoves = ({ moves }) => {
   return (
     <>
       {moves.map((move) => (
-        <span key={move.name}>{JSON.stringify(move)}</span>
+        <span key={move.move.name}>{JSON.stringify(move)}</span>
       ))}
-      {/* {JSON.stringify(moves[0])} */}
     </>
   );
 };

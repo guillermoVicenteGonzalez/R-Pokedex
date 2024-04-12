@@ -5,8 +5,8 @@ $list-width: 50rem;
   display: block;
   margin: auto;
   overflow: auto;
-  height: $list-height;
-  width: $list-width;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .pokemonEntry {

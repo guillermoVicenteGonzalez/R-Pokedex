@@ -11,7 +11,6 @@ $section-separation: 1.5rem;
   width: $card-width;
   margin: auto;
 
-
   &__side {
     height: $card-height;
     transition: all 0.8s ease;
@@ -27,6 +26,8 @@ $section-separation: 1.5rem;
     border-radius: $default-border-radius;
     border: solid 10px gold;
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.6);
+
+    overflow: hidden;
 
     &--front {
       // background: linear-gradient(to bottom right, purple, red);
@@ -52,7 +53,7 @@ $section-separation: 1.5rem;
     border: solid 5px gold;
     border-radius: $default-border-radius;
     background-color: #fff;
-    color:#000;
+    color: #000;
     font-size: 2rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.6);
     margin-bottom: $section-separation;
@@ -65,36 +66,36 @@ $section-separation: 1.5rem;
     }
   }
 
-  &__stats{
+  &__stats {
     margin-top: $section-separation;
-    border:1px solid gold;
-    padding: .2rem .5rem;
+    border: 1px solid gold;
+    padding: 0.2rem 0.5rem;
 
-    &__item{
+    &__item {
       display: flex;
       justify-content: space-between;
       font-size: 1.4rem;
-      margin-bottom: .5rem;;
+      margin-bottom: 0.5rem;
       // border-bottom: 1px solid ;
 
-      .statChip{
+      .statChip {
         // background-color: white;
         display: inline-block;
         min-width: 4rem;
-        color:#fff;
+        color: #fff;
         text-align: center;
         border-radius: 5px;
-        border:1px solid;
+        border: 1px solid;
 
-        &--good{
+        &--good {
           background-color: green;
         }
 
-        &--average{
+        &--average {
           background-color: orange;
         }
 
-        &--bad{
+        &--bad {
           background-color: red;
         }
       }
@@ -148,7 +149,7 @@ $section-separation: 1.5rem;
 
   &--fire {
     @include pkmnCardColor($fire-color, $fire-comp-color);
-    color:#fff;
+    color: #fff;
   }
 
   &--grass {

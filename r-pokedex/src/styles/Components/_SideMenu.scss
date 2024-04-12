@@ -1,0 +1,56 @@
+.sideMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  
+  width: 50vw;
+  height: 100vh;
+  padding: 5rem 2.5rem 3rem 2.5rem;
+
+  background-color: #fff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  flex-direction: row;
+  gap:2rem;
+
+  transition: all 1s;
+
+  &__toggle {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  &__sidebar{
+    width: 8rem;
+    height: 100%;
+    border-radius:10px;
+    border: solid 1px black;
+  }
+
+  &__body {
+    height: 100%;
+    width: 80%;
+    border:solid 1px black;
+    border-radius:10px;
+    overflow: auto;
+  }
+
+  &--hidden {
+    height: fit-content;
+    width: fit-content;
+    width: 0;
+    display: none;
+
+    .sideMenu__sidebar,
+    .sideMenu__body {
+      display: none;
+      width: 0;
+    }
+  }
+}
