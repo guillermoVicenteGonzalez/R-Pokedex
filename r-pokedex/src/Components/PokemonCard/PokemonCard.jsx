@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import PokemonCardMoves from "./PokemonCardMoves";
 import PokemonCardStats from "./PokemonCardStats";
@@ -34,6 +33,7 @@ const PokemonCard = ({ pkmn }) => {
 
         <div className="pkmnCard__image-container">
           <img
+            alt="pokemon image"
             src={
               pkmn.sprites == undefined ? undefined : pkmn.sprites.front_default
             }
