@@ -1,4 +1,8 @@
+//common variables
 $default-border-radius: 5px;
+
+//page variables
+$section-separation: 1.5rem;
 
 //pure colors
 $color-black: #000;
@@ -61,6 +65,15 @@ $sinister-comp-color: #6f203a;
 
 $normal-color: #dddddd;
 $normal-comp-color: #dddddd;
+
+$special-color: #0f0050;
+$special-comp-color: #0f0050;
+
+$status-color: #888888;
+$status-comp-color: #888888;
+
+$physical-color: rgb(255, 137, 3);
+$physical-comp-color: rgb(255, 137, 3);
 
 //animations
 $menuTriggerAnimationDuration: 0.5s;

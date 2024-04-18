@@ -14,6 +14,7 @@ const TestLayout = () => {
 
   useEffect(() => {
     getPokemon("");
+    // let testPkmn = test("bulbasaur");
     return () => {};
   }, []);
 
@@ -29,13 +30,15 @@ const TestLayout = () => {
       setPokemonView(pkmnList[0].name);
     } else {
       console.log("entro en get 1 pokemon");
-      let nPkmn = await pkmnService.getPokemon(name);
+      // let nPkmn = await pkmnService.getPokemon(name);
+      let nPkmn = await pkmnService.getFullPokemon(name);
       setPokemon(nPkmn);
     }
   }
 
   async function setPokemonView(pokemonName) {
-    let nPkmn = await pkmnService.getPokemon(pokemonName);
+    // let nPkmn = await pkmnService.getPokemon(pokemonName);
+    let nPkmn = await pkmnService.getFullPokemon(pokemonName);
     console.log(nPkmn);
     setPokemon(nPkmn);
   }

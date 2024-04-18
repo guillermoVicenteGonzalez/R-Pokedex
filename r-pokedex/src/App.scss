@@ -5,6 +5,7 @@
 @import "./styles/base/base";
 @import "./styles/base/animations";
 
+@import "./styles/Components/StatChip";
 @import "./styles/Components/Card";
 @import "./styles/Components/PokemonCard";
 @import "./styles/Components/PokemonList";
@@ -12,5 +13,7 @@
 @import "./styles/Components/SearchBar";
 @import "./styles/Components/SideMenu";
 @import "./styles/Components/AppBar";
+@import "./styles/Components/CloseBtn";
+@import "./styles/Components/Loading";
 
 @import "./styles/Layouts/MainLayout.scss";

@@ -1,0 +1,76 @@
+// .loading {
+//   position: relative;
+//   background-color: rgba(red, 0.5);
+//   z-index: 2;
+//   width: 10%;
+//   aspect-ratio: 1/1;
+//   border-radius: 100px;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+
+//     border-radius: 100px;
+
+//     width: 50%;
+//     aspect-ratio: 1/1;
+//     background-color: blue;
+//   }
+//   &__circular-progress {
+//   }
+// }
+$green: #008744;
+$blue: #0057e7;
+$red: #d62d20;
+$yellow: #ffa700;
+$white: #eee;
+
+$width: 100px;
+
+.loader {
+  position: relative;
+  width: $width;
+  height: $width;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+
+  .circular {
+    animation: rotate 2s linear infinite;
+    height: $width;
+    position: relative;
+    width: $width;
+  }
+}
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke: $secondary-color;
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}

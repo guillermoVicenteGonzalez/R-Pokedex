@@ -1,0 +1,25 @@
+.statChip {
+  // background-color: white;
+  display: inline-block;
+  min-width: 4rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid;
+
+  &--good {
+    background-color: green;
+  }
+
+  &--average {
+    background-color: orange;
+  }
+
+  &--bad {
+    background-color: red;
+  }
+
+  &--undefined {
+    background-color: rgb(179, 221, 255);
+  }
+}

@@ -63,7 +63,8 @@
     animation-name: shrink;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    transition: all 1s;
+    transition: width 1s;
+    padding: 5rem 0 3rem 0;
 
     .sideMenu__sidebar,
     .sideMenu__body {

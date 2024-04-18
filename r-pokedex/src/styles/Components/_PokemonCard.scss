@@ -1,6 +1,5 @@
 $card-height: 55rem;
 $card-width: 40rem;
-$section-separation: 1.5rem;
 
 .pkmnCard {
   position: relative;
@@ -20,8 +19,9 @@ $section-separation: 1.5rem;
     width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    background-color: $primary-color;
 
-    padding: 1.5rem 4.5rem;
+    // padding: 1.5rem 4.5rem;
 
     border-radius: $default-border-radius;
     border: solid 10px gold;
@@ -32,11 +32,12 @@ $section-separation: 1.5rem;
 
     &--front {
       // background: linear-gradient(to bottom right, purple, red);
+      padding: 1.5rem 4.5rem;
     }
 
     &--back {
+      // padding: 1.5rem 2rem;
       transform: rotatey(180deg);
-      background: blue;
     }
   }
 
@@ -78,28 +79,6 @@ $section-separation: 1.5rem;
       font-size: 1.4rem;
       margin-bottom: 0.5rem;
       // border-bottom: 1px solid ;
-
-      .statChip {
-        // background-color: white;
-        display: inline-block;
-        min-width: 4rem;
-        color: #fff;
-        text-align: center;
-        border-radius: 5px;
-        border: 1px solid;
-
-        &--good {
-          background-color: green;
-        }
-
-        &--average {
-          background-color: orange;
-        }
-
-        &--bad {
-          background-color: red;
-        }
-      }
     }
   }
 
@@ -146,6 +125,46 @@ $section-separation: 1.5rem;
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  &__moves {
+    height: $card-height;
+    width: 100%;
+    overflow: auto;
+    padding: 1rem;
+  }
+
+  &__move {
+    padding: 1rem;
+    background-color: #fff;
+    @include itemBoxShadow;
+    margin-bottom: 2rem;
+    border-radius: $default-border-radius;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: solid 1px black;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &__name {
+      display: inline-block;
+    }
+
+    &__data {
+      font-size: 1.6rem;
+      border-bottom: solid 1px black;
+      margin-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &__type {
+      font-size: 1rem;
+    }
   }
 
   &--fire {

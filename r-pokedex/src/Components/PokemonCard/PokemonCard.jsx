@@ -1,55 +1,49 @@
 import PropTypes from "prop-types";
-import PokemonCardMoves from "./PokemonCardMoves";
+import PokemonCardMovesList from "./PokemonCardMovesList";
 import PokemonCardStats from "./PokemonCardStats";
+import Loading from "../Common/Loading";
 
 const PokemonCard = ({ pkmn }) => {
-  function getPkmnType(p) {
-    if (Object.keys(p).includes("types")) {
-      return p.types[0].type.name;
-    } else {
-      return "";
-    }
-  }
-
   return (
-    <div className={`pkmnCard pkmnCard--${getPkmnType(pkmn)}`}>
+    <div
+      className={`pkmnCard pkmnCard--${pkmn.types ? pkmn.types[0] : "fire"}`}
+    >
+      {/* {true ? <Loading /> : <></>} */}
       <div className="pkmnCard__side pkmnCard__side--front">
-        <h1 className="pkmnCard__name">{pkmn.name}</h1>
+        {pkmn.name != undefined ? (
+          <>
+            <h1 className="pkmnCard__name">{pkmn.name}</h1>
+            <div className="pkmnCard__types">
+              {pkmn.types.map((type) => (
+                <div key={type} className={`type-chip type-chip--${type}`}>
+                  {type}
+                </div>
+              ))}
+            </div>
 
-        {Object.keys(pkmn).includes("types") ? (
-          <div className="pkmnCard__types">
-            {pkmn.types.map((type) => (
-              <div
-                key={type.type.name}
-                className={`type-chip type-chip--${type.type.name}`}
-              >
-                {type.type.name}
-              </div>
-            ))}
-          </div>
+            <div className="pkmnCard__image-container">
+              <img
+                alt="pokemon image"
+                src={
+                  pkmn.sprites == undefined
+                    ? undefined
+                    : pkmn.sprites.front_default
+                }
+                className="pkmnCard__image"
+              ></img>
+            </div>
+
+            <div className="pkmnCard__stats">
+              <PokemonCardStats stats={pkmn.stats}></PokemonCardStats>
+            </div>
+          </>
         ) : (
-          ""
+          <Loading />
         )}
-
-        <div className="pkmnCard__image-container">
-          <img
-            alt="pokemon image"
-            src={
-              pkmn.sprites == undefined ? undefined : pkmn.sprites.front_default
-            }
-            className="pkmnCard__image"
-          ></img>
-        </div>
-
-        <div className="pkmnCard__stats">
-          <PokemonCardStats stats={pkmn.stats}></PokemonCardStats>
-        </div>
       </div>
 
       <div className="pkmnCard__side pkmnCard__side--back">
-        <div className="movesContainer">
-          <PokemonCardMoves moves={pkmn.moves} />
-        </div>
+        <PokemonCardMovesList moves={pkmn.moves} />
       </div>
     </div>
   );
@@ -62,6 +56,7 @@ PokemonCard.propTypes = {
 PokemonCard.defaultProps = {
   pkmn: {
     sprites: { front_default: undefined },
+    types: [],
   },
 };
 

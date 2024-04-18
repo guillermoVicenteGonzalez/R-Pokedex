@@ -2,8 +2,9 @@
   display: inline-block;
   padding: 0.2rem 1rem;
   border-radius: $default-border-radius;
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.6);
-  min-width: 5rem;
+  // box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.6);
+  @include itemBoxShadow;
+  min-width: 8rem;
   text-align: center;
   font-size: 1.6rem;
 
@@ -77,5 +78,17 @@
 
   &--normal {
     background-color: $normal-color;
+  }
+
+  &--status {
+    background-color: $status-color;
+  }
+
+  &--special {
+    background-color: $special-color;
+  }
+
+  &--physical {
+    background-color: $physical-color;
   }
 }
