@@ -49,16 +49,22 @@ $card-width: 40rem;
     transform: rotateY(0);
   }
 
-  &__name {
-    padding: 0.5rem;
+  &__name-container {
+    padding: 0.1rem;
     text-align: center;
     border: solid 5px gold;
     border-radius: $default-border-radius;
     background-color: #fff;
-    color: #000;
-    font-size: 2rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.6);
     margin-bottom: $section-separation;
+  }
+
+  &__name {
+    // color: transparent;
+    // font-size: 2rem;
+    // background-image: linear-gradient(to right, $fire-color, $fire-comp-color);
+    // background-clip: text;
+    color: #000;
   }
 
   &__types {
@@ -140,6 +146,7 @@ $card-width: 40rem;
     @include itemBoxShadow;
     margin-bottom: 2rem;
     border-radius: $default-border-radius;
+    color: #000;
 
     &__header {
       display: flex;
@@ -168,76 +175,128 @@ $card-width: 40rem;
   }
 
   &--fire {
-    @include pkmnCardColor($fire-color, $fire-comp-color);
+    @include pkmnCardColor($fire-color, $fire-comp-color, $fire-contrast-color);
     color: #fff;
   }
 
   &--grass {
-    @include pkmnCardColor($grass-color, $grass-comp-color);
+    @include pkmnCardColor(
+      $grass-color,
+      $grass-comp-color,
+      $grass-contrast-color
+    );
   }
 
   &--steel {
-    @include pkmnCardColor($steel-color, $steel-comp-color);
+    @include pkmnCardColor(
+      $steel-color,
+      $steel-comp-color,
+      $steel-contrast-color
+    );
   }
 
   &--flying {
-    @include pkmnCardColor($flying-color, $flying-comp-color);
+    @include pkmnCardColor(
+      $flying-color,
+      $flying-comp-color,
+      $flying-contrast-color
+    );
   }
 
   &--water {
-    @include pkmnCardColor($water-color, $water-comp-color);
+    @include pkmnCardColor(
+      $water-color,
+      $water-comp-color,
+      $water-contrast-color
+    );
   }
 
   &--ice {
-    @include pkmnCardColor($ice-color, $ice-comp-color);
+    @include pkmnCardColor($ice-color, $ice-comp-color, $ice-contrast-color);
   }
 
   &--grass {
-    @include pkmnCardColor($grass-color, $grass-comp-color);
+    @include pkmnCardColor(
+      $grass-color,
+      $grass-comp-color,
+      $grass-contrast-color
+    );
   }
 
   &--bug {
-    @include pkmnCardColor($bug-color, $bug-comp-color);
+    @include pkmnCardColor($bug-color, $bug-comp-color, $bug-contrast-color);
   }
 
   &--electric {
-    @include pkmnCardColor($electric-color, $electric-comp-color);
+    @include pkmnCardColor(
+      $electric-color,
+      $electric-comp-color,
+      $electric-contrast-color
+    );
   }
 
   &--rock {
-    @include pkmnCardColor($rock-color, $rock-comp-color);
+    @include pkmnCardColor($rock-color, $rock-comp-color, $rock-contrast-color);
   }
 
-  &--earth {
-    @include pkmnCardColor($earth-color, $earth-comp-color);
+  &--ground {
+    @include pkmnCardColor(
+      $ground-color,
+      $ground-comp-color,
+      $ground-contrast-color
+    );
   }
 
   &--fighting {
-    @include pkmnCardColor($fighting-color, $fighting-comp-color);
+    @include pkmnCardColor(
+      $fighting-color,
+      $fighting-comp-color,
+      $fighting-contrast-color
+    );
   }
 
   &--psychic {
-    @include pkmnCardColor($psychic-color, $psychic-comp-color);
+    @include pkmnCardColor(
+      $psychic-color,
+      $psychic-comp-color,
+      $psychic-contrast-color
+    );
   }
 
   &--poison {
-    @include pkmnCardColor($poison-color, $poison-comp-color);
+    @include pkmnCardColor(
+      $poison-color,
+      $poison-comp-color,
+      $poison-contrast-color
+    );
   }
 
   &--dragon {
-    @include pkmnCardColor($dragon-color, $dragon-comp-color);
+    @include pkmnCardColor(
+      $dragon-color,
+      $dragon-comp-color,
+      $dragon-contrast-color
+    );
   }
 
-  &--phantom {
-    @include pkmnCardColor($phantom-color, $phantom-comp-color);
+  &--ghost {
+    @include pkmnCardColor(
+      $ghost-color,
+      $ghost-comp-color,
+      $ghost-contrast-color
+    );
   }
 
-  &--sinister {
-    @include pkmnCardColor($sinister-color, $sinister-comp-color);
+  &--dark {
+    @include pkmnCardColor($dark-color, $dark-comp-color, $dark-contrast-color);
   }
 
   &--normal {
-    @include pkmnCardColor($normal-color, $normal-comp-color);
+    @include pkmnCardColor(
+      $normal-color,
+      $normal-comp-color,
+      $normal-contrast-color
+    );
   }
 }
 

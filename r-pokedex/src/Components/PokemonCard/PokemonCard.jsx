@@ -12,7 +12,9 @@ const PokemonCard = ({ pkmn }) => {
       <div className="pkmnCard__side pkmnCard__side--front">
         {pkmn.name != undefined ? (
           <>
-            <h1 className="pkmnCard__name">{pkmn.name}</h1>
+            <div className="pkmnCard__name-container">
+              <h1 className="pkmnCard__name">{pkmn.name}</h1>
+            </div>
             <div className="pkmnCard__types">
               {pkmn.types.map((type) => (
                 <div key={type} className={`type-chip type-chip--${type}`}>

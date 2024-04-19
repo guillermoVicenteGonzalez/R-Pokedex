@@ -16,64 +16,84 @@ $surface-light: #535353;
 
 //pokemon-type variables
 $steel-color: #9a9c9a;
-$steel-comp-color: #9a9c9a;
+$steel-comp-color: #e48d53;
+$steel-contrast-color: #fff;
 
 $flying-color: #4196f4;
-$flying-comp-color: #4196f4;
+$flying-comp-color: #cfd7e0;
+$flying-contrast-color: #000;
 
 $water-color: #064ff6;
-$water-comp-color: #064ff6;
+$water-comp-color: #1a3d8f;
+$water-contrast-color: #fff;
 
-$ice-color: #6ec8c5;
-$ice-comp-color: #6ec8c5;
+$ice-color: #8ae0de;
+$ice-comp-color: #ffffff;
+$ice-contrast-color: #000;
 
 $grass-color: #03be23;
 $grass-comp-color: yellow;
+$grass-contrast-color: #000;
 
-$bug-color: #c5d474;
-$bug-comp-color: #c5d474;
+$bug-color: #a9d83b;
+$bug-comp-color: #33e7ba;
+$bug-contrast-color: #000;
 
-$electric-color: #9e952e;
+$electric-color: #f0df24;
 $electric-comp-color: #9e952e;
+$electric-contrast-color: #000;
 
-$rock-color: #7a5a44;
-$rock-comp-color: #7a5a44;
+$rock-color: #856754;
+$rock-comp-color: #747474;
+$rock-contrast-color: #ffffff;
 
-$earth-color: #dba261;
-$earth-comp-color: #dba261;
+$ground-color: #dba261;
+$ground-comp-color: #b84a17;
+$ground-contrast-color: #000;
 
 $fire-color: #fa3929;
 $fire-comp-color: rgb(115, 14, 197);
+$fire-contrast-color: #fff;
 
 $fighting-color: #ff7315;
-$fighting-comp-color: #ff7315;
+$fighting-comp-color: #ff1515;
+$fighting-contrast-color: #fff;
 
 $psychic-color: #f54f85;
-$psychic-comp-color: #f54f85;
+$psychic-comp-color: #935cf8;
+$psychic-contrast-color: #fff;
 
 $poison-color: #c00aab;
-$poison-comp-color: #c00aab;
+$poison-comp-color: #322872;
+$poison-contrast-color: #fff;
 
-$dragon-color: #9834f7;
-$dragon-comp-color: #9834f7;
+$dragon-color: #8300fd;
+$dragon-comp-color: #c00101;
+$dragon-contrast-color: #fff;
 
-$phantom-color: #2a0864;
-$phantom-comp-color: #2a0864;
+$ghost-color: #2a0864;
+$ghost-comp-color: #cc5f5f;
+$ghost-contrast-color: #fff;
 
-$sinister-color: #6f203a;
-$sinister-comp-color: #6f203a;
+$dark-color: #000000;
+$dark-comp-color: #6f203a;
+$dark-contrast-color: #fff;
 
-$normal-color: #dddddd;
-$normal-comp-color: #dddddd;
+$normal-color: #ffffff;
+$normal-comp-color: #cc8e48;
+$normal-contrast-color: #000;
 
-$special-color: #0f0050;
+$special-color: #9f0be4;
 $special-comp-color: #0f0050;
+$special-contrast-color: #fff;
 
-$status-color: #888888;
+$status-color: #98e0fd;
 $status-comp-color: #888888;
+$status-contrast-color: #000;
 
 $physical-color: rgb(255, 137, 3);
-$physical-comp-color: rgb(255, 137, 3);
+$physical-comp-color: rgb(255, 230, 201);
+$physical-contrast-color: #000;
 
 //animations
 $menuTriggerAnimationDuration: 0.5s;

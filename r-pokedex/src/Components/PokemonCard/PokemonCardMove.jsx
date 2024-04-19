@@ -17,6 +17,30 @@ const PokemonCardMove = ({ name, url }) => {
     }
   }
 
+  function evaluatePP(num) {
+    if (num < 5) {
+      return "bad";
+    } else if (num < 15) {
+      return "average";
+    } else {
+      return "good";
+    }
+  }
+
+  function evaluateAccuracy(num) {
+    if (num == "" || num == undefined) {
+      return "undefined";
+    }
+
+    if (num <= 50) {
+      return "bad";
+    } else if (num <= 95) {
+      return "average";
+    } else {
+      return "good";
+    }
+  }
+
   useEffect(() => {
     getMove(url).then((m) => {
       setMove(m);
@@ -48,8 +72,18 @@ const PokemonCardMove = ({ name, url }) => {
         <span className={`statChip statChip--${evaluatePower(move.power)}`}>
           {move.power}&nbsp;
         </span>
-        <span>pp: {move.pp}</span>
-        <span>accuracy: {move.accuracy}</span>
+
+        <span>pp: </span>
+        <span className={`statChip statChip--${evaluatePP(move.pp)}`}>
+          {move.pp}
+        </span>
+
+        <span>accuracy: </span>
+        <span
+          className={`statChip statChip--${evaluateAccuracy(move.accuracy)}`}
+        >
+          {move.accuracy}
+        </span>
       </div>
 
       <div className="pkmnCard__move__effect">

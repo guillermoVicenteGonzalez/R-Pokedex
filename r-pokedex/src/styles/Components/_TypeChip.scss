@@ -2,93 +2,153 @@
   display: inline-block;
   padding: 0.2rem 1rem;
   border-radius: $default-border-radius;
-  // box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.6);
   @include itemBoxShadow;
   min-width: 8rem;
   text-align: center;
   font-size: 1.6rem;
+  font-weight: 500;
 
   &--steel {
-    background-color: $steel-color;
+    @include pkmnChipColor(
+      $steel-color,
+      $steel-comp-color,
+      $steel-contrast-color
+    );
+    // color:$color-black;
+    border: solid 1px $color-white;
   }
 
   &--flying {
-    background-color: $flying-color;
+    @include pkmnChipColor(
+      $flying-color,
+      $flying-comp-color,
+      $flying-contrast-color
+    );
+    // color:$color-black;
+    border: solid 1px $color-white;
   }
 
   &--water {
-    background-color: $water-color;
+    @include pkmnChipColor(
+      $water-color,
+      $water-comp-color,
+      $water-contrast-color
+    );
+    border: solid 1px $color-white;
   }
   &--ice {
-    background-color: $ice-color;
+    @include pkmnChipColor($ice-color, $ice-comp-color, $ice-contrast-color);
+    border: solid 1px $color-white;
   }
 
   &--grass {
     background: linear-gradient(to bottom, $grass-color, $grass-comp-color 95%);
+    // @include pkmnChipColor($grass-color, $grass-comp-color, $grass-contrast-color);
     border: solid 1px $grass-comp-color;
   }
 
   &--bug {
-    background-color: $bug-color;
+    @include pkmnChipColor($bug-color, $bug-comp-color, $bug-contrast-color);
+    border: solid 1px $color-white;
   }
 
   &--electric {
-    background-color: $electric-color;
+    @include pkmnChipColor(
+      $electric-color,
+      $electric-comp-color,
+      $electric-contrast-color
+    );
+    border: solid 1px $color-white;
   }
 
   &--rock {
-    background-color: $rock-color;
+    @include pkmnChipColor($rock-color, $rock-comp-color, $rock-contrast-color);
+    border: solid 1px $color-white;
   }
 
-  &--earth {
-    background-color: $earth-color;
+  &--ground {
+    @include pkmnChipColor(
+      $ground-color,
+      $ground-comp-color,
+      $ground-contrast-color
+    );
+    border: solid 1px $color-white;
   }
 
   &--fire {
-    // background:linear-gradient(to bottom, $fire-color, $fire-comp-color 90% 100%);
-    // border: solid 1px $fire-comp-color;
-    @include pkmnChipColor($fire-color, $fire-comp-color);
+    @include pkmnChipColor($fire-color, $fire-comp-color, $fire-contrast-color);
     border: solid 1px white;
     color: #fff;
   }
 
   &--fighting {
-    background-color: $fighting-color;
+    @include pkmnChipColor(
+      $fighting-color,
+      $fighting-comp-color,
+      $fighting-contrast-color
+    );
+    border: solid 1px white;
   }
 
   &--psychic {
-    background-color: $psychic-color;
+    @include pkmnChipColor(
+      $psychic-color,
+      $psychic-comp-color,
+      $psychic-contrast-color
+    );
+    border: solid 1px white;
   }
 
   &--poison {
-    background-color: $poison-color;
+    @include pkmnChipColor(
+      $poison-color,
+      $poison-comp-color,
+      $poison-contrast-color
+    );
+    border: solid 1px white;
   }
 
   &--dragon {
-    background-color: $dragon-color;
+    @include pkmnChipColor(
+      $dragon-color,
+      $dragon-comp-color,
+      $dragon-contrast-color
+    );
+    border: solid 1px white;
   }
 
-  &--phantom {
-    background-color: $phantom-color;
+  &--ghost {
+    @include pkmnChipColor(
+      $ghost-color,
+      $ghost-comp-color,
+      $ghost-contrast-color
+    );
+    border: solid 1px white;
   }
 
-  &--sinister {
-    background-color: $sinister-color;
+  &--dark {
+    @include pkmnChipColor($dark-color, $dark-comp-color, $dark-contrast-color);
+    border: solid 1px white;
   }
 
   &--normal {
-    background-color: $normal-color;
+    @include pkmnChipColor(
+      $normal-color,
+      $normal-comp-color,
+      $normal-contrast-color
+    );
+    border: solid 1px white;
   }
 
   &--status {
-    background-color: $status-color;
+    @include attackClassChip(status);
   }
 
   &--special {
-    background-color: $special-color;
+    @include attackClassChip(special);
   }
 
   &--physical {
-    background-color: $physical-color;
+    @include attackClassChip(physical);
   }
 }

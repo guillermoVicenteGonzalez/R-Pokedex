@@ -1,11 +1,34 @@
-@mixin pkmnChipColor($primary, $secondary) {
+@mixin pkmnChipColor($primary, $secondary, $contrast) {
   background: linear-gradient(to bottom, $primary, $secondary);
+  color: $contrast;
+  border: solid 1px white;
 }
 
-@mixin pkmnCardColor($primary, $secondary) {
+@mixin attackClassChip($type) {
+  @if $type == status {
+    background: radial-gradient($status-color, $status-comp-color);
+    color: $status-contrast-color;
+    border: solid 1px white;
+  }
+
+  @if $type == special {
+    background: radial-gradient($special-color, $special-comp-color);
+    color: $special-contrast-color;
+    border: solid 1px white;
+  }
+
+  @if $type == physical {
+    background: radial-gradient($physical-color, $physical-comp-color);
+    color: $physical-contrast-color;
+    border: solid 1px white;
+  }
+}
+
+@mixin pkmnCardColor($primary, $secondary, $contrast) {
   .pkmnCard__side--back,
   .pkmnCard__side--front {
-    background: linear-gradient(to bottom right, $primary 60%, $secondary);
+    background: linear-gradient(to bottom right, $primary 50%, $secondary);
+    color: $contrast;
   }
 }
 
