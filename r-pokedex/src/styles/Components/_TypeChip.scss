@@ -2,7 +2,7 @@
   display: inline-block;
   padding: 0.2rem 1rem;
   border-radius: $default-border-radius;
-  @include itemBoxShadow;
+  @include itemBoxShadow(dark);
   min-width: 8rem;
   text-align: center;
   font-size: 1.6rem;
