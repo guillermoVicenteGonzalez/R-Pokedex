@@ -15,7 +15,7 @@ const SearchFilter = ({ list, listParam, onSearch }) => {
 
   function onInputCB(e) {
     setInput(e.target.value);
-    let filtered = filterList(list, listParam, input);
+    let filtered = filterList(list, listParam, e.target.value);
     onSearch(filtered);
   }
 
