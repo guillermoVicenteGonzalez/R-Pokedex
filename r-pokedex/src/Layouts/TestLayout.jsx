@@ -77,33 +77,33 @@ const TestLayout = () => {
           sidebar={
             <>
               <div onClick={() => setLimits({ limit: 151, offset: 0 })}>
-                gen 1
+                gen  <br></br>1
               </div>
               <div onClick={() => setLimits({ limit: 100, offset: 151 })}>
-                gen 2
+                gen <br></br>2
               </div>
               <div onClick={() => setLimits({ limit: 135, offset: 251 })}>
-                gen 3
+                gen <br></br>3
               </div>
               <div onClick={() => setLimits({ limit: 107, offset: 386 })}>
-                gen 4
+              gen <br></br>4
               </div>
               <div onClick={() => setLimits({ limit: 156, offset: 493 })}>
-                gen 5
+              gen <br></br>5
               </div>
               <div onClick={() => setLimits({ limit: 72, offset: 649 })}>
-                gen 6
+              gen <br></br>6
               </div>
               <div onClick={() => setLimits({ limit: 88, offset: 721 })}>
-                gen 7
+              gen <br></br>7
               </div>
               <div onClick={() => setLimits({ limit: 96, offset: 809 })}>
-                gen 8
+              gen <br></br>8
               </div>
               <div onClick={() => setLimits({ limit: 120, offset: 905 })}>
-                gen 9
+              gen <br></br>9
               </div>
-              <div onClick={() => setLimits({ limit: 1025, offset: 0})}>
+              <div onClick={() => setLimits({ limit: 1025, offset: 0 })}>
                 All
               </div>
               <div onClick={() => setTabIndex(1)}>type table</div>

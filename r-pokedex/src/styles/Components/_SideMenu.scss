@@ -59,6 +59,11 @@ $side-menu-width: 9rem;
       cursor: pointer;
       border-radius: $default-border-radius;
       @include itemBoxShadow(dark);
+      display: block;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 

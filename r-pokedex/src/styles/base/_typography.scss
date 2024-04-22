@@ -1,3 +1,22 @@
+@font-face{
+  font-family: "Pokemon";
+  src: url("./assets/PokemonFont.ttf");
+  size-adjust: 90%;
+}
+
+@font-face {
+  font-family: "Munro";
+  src: url("./assets/Munro.ttf");
+}
+
+
+:root{
+  font-family: 'Pokemon', sans-serif;
+  // letter-spacing: .01px;
+  letter-spacing: -2.5px;
+}
+
 .heading-primary {
   font-size: 5rem;
+  // font-family: pokemonFont;
 }
