@@ -76,14 +76,16 @@ $card-width: 40rem;
 
   &__stats {
     margin-top: $section-separation;
-    border: 1px solid gold;
+    border: 3px solid gold;
     padding: 0.2rem 0.5rem;
 
     &__item {
       display: flex;
       justify-content: space-between;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
+      font-weight: bold;
       margin-bottom: 0.5rem;
+      line-height: 2rem;
       // border-bottom: 1px solid ;
     }
   }
@@ -151,7 +153,6 @@ $card-width: 40rem;
     color: #000;
     // color:#fff;
 
-
     &__header {
       display: flex;
       align-items: center;
@@ -160,7 +161,7 @@ $card-width: 40rem;
       margin-bottom: 0.5rem;
       padding-bottom: 0.5rem;
 
-      padding:1rem;
+      padding: 1rem;
 
       // .type-chip{
       //   outline: solid 1px #000;
@@ -171,9 +172,9 @@ $card-width: 40rem;
       border-radius: $default-border-radius;
       display: inline-block;
       background-color: rgb(240, 240, 240);
-      color:#000;
-      padding:.5rem;
-      @include itemBoxShadow(light)
+      color: #000;
+      padding: 0.5rem;
+      @include itemBoxShadow(light);
     }
 
     &__data {
@@ -191,7 +192,7 @@ $card-width: 40rem;
       font-size: 1rem;
     }
 
-    &__effect{
+    &__effect {
       font-size: 1.6rem;
     }
   }

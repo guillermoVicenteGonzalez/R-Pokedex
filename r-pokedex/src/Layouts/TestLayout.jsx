@@ -11,12 +11,21 @@ const TestLayout = () => {
   const [pkmnList, setPkmnList] = useState([]);
   // const [filteredPkmnList, setFilteredPkmnList] = useState([]);
   const [sideMenuTrigger, setSideMenuTrigger] = useState(false);
+  const [tabIndex, setTabIndex] = useState(0);
+  const [limits, setLimits] = useState({ limit: 151, offset: 0 });
 
   useEffect(() => {
     getPokemon("");
     // let testPkmn = test("bulbasaur");
     return () => {};
   }, []);
+
+  useEffect(() => {
+    pkmnService.getPokemonList(limits.limit, limits.offset).then((result) => {
+      setPkmnList(result);
+    });
+    return () => {};
+  }, [limits]);
 
   //cuidado, lista por un lado, visualizacion por el otro.
   //cuidado. Hay que hacer un DTO.
@@ -26,7 +35,6 @@ const TestLayout = () => {
       console.log("entro en get muchos pokemon");
       let pkmnList = await pkmnService.getPokemonList();
       setPkmnList(pkmnList);
-      // setFilteredPkmnList(pkmnList);
       setPokemonView(pkmnList[0].name);
     } else {
       console.log("entro en get 1 pokemon");
@@ -68,17 +76,48 @@ const TestLayout = () => {
           onClose={() => setSideMenuTrigger(false)}
           sidebar={
             <>
-              <div>hola</div>
-              <div>adios</div>
+              <div onClick={() => setLimits({ limit: 151, offset: 0 })}>
+                gen 1
+              </div>
+              <div onClick={() => setLimits({ limit: 100, offset: 151 })}>
+                gen 2
+              </div>
+              <div onClick={() => setLimits({ limit: 135, offset: 251 })}>
+                gen 3
+              </div>
+              <div onClick={() => setLimits({ limit: 107, offset: 386 })}>
+                gen 4
+              </div>
+              <div onClick={() => setLimits({ limit: 156, offset: 493 })}>
+                gen 5
+              </div>
+              <div onClick={() => setLimits({ limit: 72, offset: 649 })}>
+                gen 6
+              </div>
+              <div onClick={() => setLimits({ limit: 88, offset: 721 })}>
+                gen 7
+              </div>
+              <div onClick={() => setLimits({ limit: 96, offset: 809 })}>
+                gen 8
+              </div>
+              <div onClick={() => setLimits({ limit: 120, offset: 905 })}>
+                gen 9
+              </div>
+              <div onClick={() => setLimits({ limit: 1025, offset: 0})}>
+                All
+              </div>
+              <div onClick={() => setTabIndex(1)}>type table</div>
             </>
           }
         >
-          <div className="testLayout__list">
-            <PokemonListWidget
-              pkmnList={pkmnList}
-              onPkmnSelected={(name) => setPokemonView(name)}
-            ></PokemonListWidget>
-          </div>
+          {tabIndex == 0 ? (
+            <div className="testLayout__list">
+              <PokemonListWidget
+                pkmnList={pkmnList}
+                onPkmnSelected={(name) => setPokemonView(name)}
+              ></PokemonListWidget>
+            </div>
+          ) : null}
         </SideMenu>
         <div className={sideMenuTrigger ? "slideToRight" : "slideFromRight"}>
           <PokemonCard pkmn={pokemon} />

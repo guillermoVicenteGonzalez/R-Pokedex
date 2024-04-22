@@ -9,6 +9,11 @@ $list-width: 50rem;
 
   &__searchbar {
     margin: 2rem 1rem;
+    display: flex;
+  }
+
+  &__type-filter {
+    display: inline;
   }
 
   &__view {
