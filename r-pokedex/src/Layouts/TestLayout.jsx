@@ -57,7 +57,7 @@ const TestLayout = () => {
         <AppBar
           actions={
             <button
-              className="sideMenu__trigger "
+              className={`sideMenu__trigger ${sideMenuTrigger ? `sideMenu__trigger--open`: ""}`}
               onClick={() => {
                 setSideMenuTrigger(!sideMenuTrigger);
               }}
