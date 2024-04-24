@@ -57,12 +57,12 @@ const TestLayout = () => {
         <AppBar
           actions={
             <button
-              className="sideMenu__trigger"
+              className="sideMenu__trigger "
               onClick={() => {
                 setSideMenuTrigger(!sideMenuTrigger);
               }}
             >
-              show
+              <span className="sideMenu__trigger__icon">&nbsp;</span>
             </button>
           }
           header={<h1 className="heading-primary">Pokedex</h1>}

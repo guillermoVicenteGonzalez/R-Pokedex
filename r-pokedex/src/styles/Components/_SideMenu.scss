@@ -43,6 +43,42 @@ $side-menu-width: 9rem;
     right: 2rem;
   }
 
+  &__trigger{
+    width: 4rem;
+    height:4rem;
+    padding: .5rem;
+    border-radius:100px;
+    outline: none;
+    border:none;
+    position: relative;
+    cursor: pointer;
+    &__icon{
+      display: block;
+      margin: auto;
+      width: 80%;
+      height: 1px;
+      background-color: black;
+
+      &::after,
+      &::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: black;
+      }
+
+      &::before{
+        position: relative;
+        top:-1rem;
+      }
+
+      &::after{
+        bottom:1rem;
+      }
+    }
+  }
+
   &__sidebar {
     width: 9rem;
     height: 100%;
