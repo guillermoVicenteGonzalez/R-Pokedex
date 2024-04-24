@@ -77,7 +77,7 @@ const TestLayout = () => {
           sidebar={
             <>
               <div onClick={() => setLimits({ limit: 151, offset: 0 })}>
-                gen  <br></br>1
+                gen <br></br>1
               </div>
               <div onClick={() => setLimits({ limit: 100, offset: 151 })}>
                 gen <br></br>2
@@ -86,22 +86,22 @@ const TestLayout = () => {
                 gen <br></br>3
               </div>
               <div onClick={() => setLimits({ limit: 107, offset: 386 })}>
-              gen <br></br>4
+                gen <br></br>4
               </div>
               <div onClick={() => setLimits({ limit: 156, offset: 493 })}>
-              gen <br></br>5
+                gen <br></br>5
               </div>
               <div onClick={() => setLimits({ limit: 72, offset: 649 })}>
-              gen <br></br>6
+                gen <br></br>6
               </div>
               <div onClick={() => setLimits({ limit: 88, offset: 721 })}>
-              gen <br></br>7
+                gen <br></br>7
               </div>
               <div onClick={() => setLimits({ limit: 96, offset: 809 })}>
-              gen <br></br>8
+                gen <br></br>8
               </div>
               <div onClick={() => setLimits({ limit: 120, offset: 905 })}>
-              gen <br></br>9
+                gen <br></br>9
               </div>
               <div onClick={() => setLimits({ limit: 1025, offset: 0 })}>
                 All
@@ -119,7 +119,10 @@ const TestLayout = () => {
             </div>
           ) : null}
         </SideMenu>
-        <div className={sideMenuTrigger ? "slideToRight" : "slideFromRight"}>
+        {/* <div className={sideMenuTrigger ? "slideToRight" : "slideFromRight"}>
+          <PokemonCard pkmn={pokemon} />
+        </div> */}
+        <div className={sideMenuTrigger ? "slideContainer" : "slideContainer--hidden"}>
           <PokemonCard pkmn={pokemon} />
         </div>
       </div>

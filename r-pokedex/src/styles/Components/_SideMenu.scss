@@ -11,8 +11,6 @@ $side-menu-width: 9rem;
   height: 100vh;
   padding: 5rem 2.5rem 3rem 2.5rem;
 
-  // background-color: $surface-color;
-  // color: $secondary-color;
 
   background-color: $color-white;
 
@@ -24,9 +22,20 @@ $side-menu-width: 9rem;
   flex-direction: row;
   gap: 2rem;
 
-  animation-name: grow;
+  animation-name: grow-width;
   animation-duration: $menuTriggerAnimationDuration;
   transition: all 1s;
+
+  @include respond(tab-port){
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius:0;
+    width: 100%;
+    height: 50%;
+    top:50%;
+    animation-name:slide-from-bottom;
+    animation-duration: $menuTriggerAnimationDuration;
+    transition:all 1s,
+  }
 
   &__toggle {
     position: absolute;
@@ -78,11 +87,17 @@ $side-menu-width: 9rem;
   &--hidden {
     // height: fit-content;
     // width: fit-content
-    animation-name: shrink;
+    animation-name: shrink-width;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    transition: width 1s;
+    // transition: all 1s;
     padding: 5rem 0 3rem 0;
+
+    @include respond(tab-port){
+      padding: 0;
+      animation-name: slide-to-bottom;
+      animation-duration: 1s;
+    }
 
     .sideMenu__sidebar,
     .sideMenu__body {

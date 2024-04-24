@@ -14,7 +14,13 @@
 // }
 
 .testLayout {
-  display: block;
+  overflow: hidden;
+  // display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
   margin: auto;
   width: 100vw;
   height: 100vh;
@@ -23,7 +29,7 @@
 
   &__heading {
     display: block;
-    margin: auto;
+    // margin: auto;
     text-align: center;
     // position: relative;
   }
@@ -37,6 +43,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
   }
 
   &__list {

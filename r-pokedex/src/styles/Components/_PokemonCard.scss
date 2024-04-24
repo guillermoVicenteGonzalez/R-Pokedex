@@ -8,10 +8,13 @@ $card-width: 40rem;
 
   height: $card-height;
   width: $card-width;
+
+
   margin: auto;
 
   &__side {
-    height: $card-height;
+    // height: $card-height;
+    height: 100%;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -160,7 +163,6 @@ $card-width: 40rem;
       border-bottom: solid 1px black;
       margin-bottom: 0.5rem;
       padding-bottom: 0.5rem;
-
 
       // .type-chip{
       //   outline: solid 1px #000;

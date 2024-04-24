@@ -1,4 +1,4 @@
-@keyframes grow {
+@keyframes grow-width {
   0% {
     overflow: hidden;
     display: block;
@@ -16,7 +16,45 @@
   }
 }
 
-@keyframes shrink {
+@keyframes grow-height{
+  0% {
+    overflow: hidden;
+    display: block;
+    height: 0;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    // width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-bottom{
+  0%{
+    transform:translateY(100%)
+  }
+
+  100%{
+    transform:translateY(0)
+  }
+}
+
+@keyframes slide-to-bottom{
+  0%{
+    transform:translateY(0)
+  }
+
+  100%{
+    transform:translateY(100%)
+  }
+}
+
+@keyframes shrink-width {
   0% {
     // display: block;
     opacity: 1;
@@ -30,8 +68,10 @@
     width: 0;
     display: none;
     opacity: 0;
+    padding: 5rem 0 3rem 0;
   }
 }
+
 
 @keyframes slideCardToRight {
   0% {
@@ -50,6 +90,26 @@
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes slideCardToTop{
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    transform: translateY(-50%) scale(.8);
+  }
+}
+
+@keyframes slideCardFromTop{
+  0% {
+    transform: translateY(-50%) scale(.8);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
