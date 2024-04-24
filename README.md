@@ -11,11 +11,10 @@ I am aware of my current junior level so this also serves as a milestone of both
  - [x] more pokemon data
  - [ ] color palette
  - [ ] theme changing
- - [ ] responsive
+ - [x] responsive
  - [x] loading 
  - [x] service that loads all the desired pkmnData.
     - [x] Too many moves. They should be loaded separately.
- - [ ] sidemenu sidebar
- - [ ] slide in pokemon card animations
+ - [x] sidemenu sidebar
  - [ ] Error handling
  - [ ] Type table
