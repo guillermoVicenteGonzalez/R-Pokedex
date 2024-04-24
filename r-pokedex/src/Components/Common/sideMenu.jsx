@@ -11,7 +11,7 @@ const SideMenu = ({ visible, children, onClose, sidebar }) => {
 
       <div className="sideMenu__body">
         <button className="sideMenu__toggle closeBtn" onClick={() => onClose()}>
-          X
+          <span className="sideMenu__toggle__icon"></span>
         </button>
         {children}
       </div>

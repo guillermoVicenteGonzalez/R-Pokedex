@@ -122,7 +122,11 @@ const TestLayout = () => {
         {/* <div className={sideMenuTrigger ? "slideToRight" : "slideFromRight"}>
           <PokemonCard pkmn={pokemon} />
         </div> */}
-        <div className={sideMenuTrigger ? "slideContainer" : "slideContainer--hidden"}>
+        <div
+          className={
+            sideMenuTrigger ? "slideContainer" : "slideContainer--hidden"
+          }
+        >
           <PokemonCard pkmn={pokemon} />
         </div>
       </div>

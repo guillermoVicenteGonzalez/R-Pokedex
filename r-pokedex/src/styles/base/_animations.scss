@@ -16,7 +16,7 @@
   }
 }
 
-@keyframes grow-height{
+@keyframes grow-height {
   0% {
     overflow: hidden;
     display: block;
@@ -34,23 +34,23 @@
   }
 }
 
-@keyframes slide-from-bottom{
-  0%{
-    transform:translateY(100%)
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(100%);
   }
 
-  100%{
-    transform:translateY(0)
+  100% {
+    transform: translateY(0);
   }
 }
 
-@keyframes slide-to-bottom{
-  0%{
-    transform:translateY(0)
+@keyframes slide-to-bottom {
+  0% {
+    transform: translateY(0);
   }
 
-  100%{
-    transform:translateY(100%)
+  100% {
+    transform: translateY(100%);
   }
 }
 
@@ -72,7 +72,6 @@
   }
 }
 
-
 @keyframes slideCardToRight {
   0% {
     transform: translateX(0);
@@ -93,19 +92,19 @@
   }
 }
 
-@keyframes slideCardToTop{
+@keyframes slideCardToTop {
   0% {
     transform: translateY(0) scale(1);
   }
 
   100% {
-    transform: translateY(-50%) scale(.8);
+    transform: translateY(-50%) scale(0.8);
   }
 }
 
-@keyframes slideCardFromTop{
+@keyframes slideCardFromTop {
   0% {
-    transform: translateY(-50%) scale(.8);
+    transform: translateY(-50%) scale(0.8);
   }
 
   100% {

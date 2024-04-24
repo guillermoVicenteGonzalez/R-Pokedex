@@ -1,23 +1,23 @@
-.btn{
-    //reset
-    display: block;
-    margin: auto;
-    outline: none;
-    border: none;
+.btn {
+  //reset
+  display: block;
+  margin: auto;
+  outline: none;
+  border: none;
 
-    //style
-    padding:.5rem 1rem;
-    border-radius: $btn-border-radius;
-    cursor:pointer;
+  //style
+  padding: 0.5rem 1rem;
+  border-radius: $btn-border-radius;
+  cursor: pointer;
 
-    &--icon{
-        border-radius: 100px;
-        height: 6rem;
-        width: 6rem;
-        text-align: center;
-    }
+  &--icon {
+    border-radius: 100px;
+    height: 6rem;
+    width: 6rem;
+    text-align: center;
+  }
 
-    &--round{
-        border-radius:100px;
-    }
+  &--round {
+    border-radius: 100px;
+  }
 }

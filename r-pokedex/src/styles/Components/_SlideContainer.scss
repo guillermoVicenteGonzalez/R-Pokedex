@@ -1,21 +1,21 @@
-.slideContainer{
-    animation-name: slideCardToRight;
+.slideContainer {
+  animation-name: slideCardToRight;
+  animation-duration: $menuTriggerAnimationDuration;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+
+  @include respond(tab-port) {
+    animation-name: slideCardToTop;
+  }
+
+  &--hidden {
+    animation-name: slideCardFromRight;
     animation-duration: $menuTriggerAnimationDuration;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
 
-    @include respond(tab-port){
-        animation-name: slideCardToTop;
+    @include respond(tab-port) {
+      animation-name: slideCardFromTop;
     }
-
-    &--hidden{
-        animation-name: slideCardFromRight;
-        animation-duration: $menuTriggerAnimationDuration;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-out;
-
-        @include respond(tab-port){
-            animation-name:slideCardFromTop;
-        }
-    }
+  }
 }
