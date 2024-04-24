@@ -29,8 +29,8 @@ $side-menu-width: 9rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     width: 100%;
-    height: 50%;
-    top: 50%;
+    height: 70%;
+    top: 30%;
     animation-name: slide-from-bottom;
     animation-duration: $menuTriggerAnimationDuration;
     transition: all 1s;
@@ -38,10 +38,14 @@ $side-menu-width: 9rem;
 
   &__toggle {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 1.5rem;
+    right: 1.5rem;
     width: 4rem;
     height: 4rem;
+
+    @include respond(phone){
+      display: none;
+    }
 
     &__icon{
       display: block;
