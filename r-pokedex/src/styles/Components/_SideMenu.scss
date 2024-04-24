@@ -104,7 +104,7 @@ $side-menu-width: 9rem;
         height: 2px;
         background-color: $color-black;
         display: inline-block;
-        transition: all 0.3s;
+        transition: all 0.4s;
       }
 
       &::before,
@@ -116,11 +116,11 @@ $side-menu-width: 9rem;
       }
 
       &::before {
-        // top: -0.8rem;
+        top: -0.8rem;
       }
 
       &::after {
-        // top: 0.8rem;
+        top: 0.8rem;
       }
     }
 
@@ -128,27 +128,23 @@ $side-menu-width: 9rem;
       // background-color: red;
     }
 
-    @include respond(phone){
-      &--open{
-        position: relative;
-        // display: block;
+    @include respond(tab-port){
 
+
+      &--open{
         .sideMenu__trigger__icon {
           background-color: transparent;
-          height: 0;
 
-          &:after{
+          &::after{
             position: absolute;
-            background-color: $secondary-color;
             top: 50% !important;
             transform: rotate(-245deg);
+            background-color: $secondary-color;
           }
 
-          &::before{
-            // position: absolute;
-            // left: 0;
+          &::before{            
+            position: absolute;
             top: 50% !important;
-            // transform: translate(0, 50%);
             transform: rotate(245deg);
           }
         }
