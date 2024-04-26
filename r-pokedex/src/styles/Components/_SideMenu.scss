@@ -43,21 +43,21 @@ $side-menu-width: 9rem;
     width: 4rem;
     height: 4rem;
 
-    @include respond(phone){
+    @include respond(phone) {
       display: none;
     }
 
-    &__icon{
+    &__icon {
       display: block;
       width: 100%;
       height: 1.5px;
-      background-color: $color-white  ;
+      background-color: $color-white;
       // transform: rotateX(90deg);
       transform: rotate(45deg);
       transition: all 1s;
       background-color: $secondary-color;
 
-      &::after{
+      &::after {
         transition: all 1s;
         content: "";
         display: block;
@@ -68,11 +68,11 @@ $side-menu-width: 9rem;
       }
     }
 
-    &:hover &__icon{
+    &:hover &__icon {
       transform: rotate(-225deg);
     }
 
-    &:hover &__icon::after{
+    &:hover &__icon::after {
       transform: rotate(-90deg);
     }
   }
@@ -124,25 +124,23 @@ $side-menu-width: 9rem;
       }
     }
 
-    &--open{
+    &--open {
       // background-color: red;
     }
 
-    @include respond(tab-port){
-
-
-      &--open{
+    @include respond(tab-port) {
+      &--open {
         .sideMenu__trigger__icon {
           background-color: transparent;
 
-          &::after{
+          &::after {
             position: absolute;
             top: 50% !important;
             transform: rotate(-245deg);
             background-color: $secondary-color;
           }
 
-          &::before{            
+          &::before {
             position: absolute;
             top: 50% !important;
             transform: rotate(245deg);

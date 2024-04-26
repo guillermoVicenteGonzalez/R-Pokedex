@@ -12,7 +12,6 @@ $card-width: 40rem;
   margin: auto;
 
   &__side {
-    // height: $card-height;
     height: 100%;
     transition: all 0.8s ease;
     position: absolute;
@@ -23,22 +22,17 @@ $card-width: 40rem;
     backface-visibility: hidden;
     background-color: $primary-color;
 
-    // padding: 1.5rem 4.5rem;
-
     border-radius: $default-border-radius;
     border: solid 10px gold;
-    // box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.6);
     box-shadow: 0 1rem 2rem rgba($color-white, 0.6);
 
     overflow: hidden;
 
     &--front {
-      // background: linear-gradient(to bottom right, purple, red);
       padding: 1.5rem 4.5rem;
     }
 
     &--back {
-      // padding: 1.5rem 2rem;
       transform: rotatey(180deg);
     }
   }
@@ -49,6 +43,24 @@ $card-width: 40rem;
 
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  @include respond(tab-port) {
+    &:hover &__side--front {
+      transform: rotate(0);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(180deg);
+    }
+
+    &--rotated &__side--front {
+      transform: rotateY(-180deg) !important;
+    }
+
+    &--rotated &__side--back {
+      transform: rotateY(0) !important;
+    }
   }
 
   &__name-container {
@@ -88,7 +100,6 @@ $card-width: 40rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
       line-height: 2rem;
-      // border-bottom: 1px solid ;
     }
   }
 
@@ -196,6 +207,56 @@ $card-width: 40rem;
 
     &__effect {
       font-size: 1.6rem;
+    }
+  }
+
+  &__flip-trigger {
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+      text-align: right;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+
+      input {
+        // display: none;
+      }
+
+      label {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        background-color: red;
+        border-radius: 100px;
+      }
+
+      input:checked ~ label {
+        background-color: blue;
+        // width: 20rem;
+      }
+    }
+  }
+
+  &__rotateBtn{
+    display: none;
+
+    @include respond(tab-port){
+      display: block;
+      bottom: 0; 
+      position: absolute;
+      right: 0;
+      width: 3rem;
+      height: 3rem;
+      background-color: $surface-color;
+      color:$secondary-color;
+
+      //style
+      outline: $color-white;
+      border: none;
+      border-radius: 100px;
+      @include itemBoxShadow(dark);
     }
   }
 
