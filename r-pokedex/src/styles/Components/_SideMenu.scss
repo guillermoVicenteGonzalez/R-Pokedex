@@ -212,6 +212,8 @@ $side-menu-width: 9rem;
       padding: 0;
       animation-name: slide-to-bottom;
       animation-duration: 1s;
+      // display: none;
+      animation-fill-mode: forwards;
     }
 
     .sideMenu__sidebar,
